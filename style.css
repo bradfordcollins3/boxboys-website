@@ -158,3 +158,29 @@ nav a{
 }
 
 }
+
+/* ===== ABOUT PAGE ===== */
+
+.about-page{
+    padding:100px 0;
+    background:white;
+}
+
+.about-page .container{
+    max-width:850px;
+}
+
+.about-page h2{
+    font-size:3rem;
+    margin-bottom:30px;
+    color:#2f6b45;
+}
+
+.about-page p{
+    font-size:1.1rem;
+    margin-bottom:22px;
+}
+
+.about-page .button{
+    margin-top:15px;
+}
