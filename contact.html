@@ -38,8 +38,8 @@
             get back to you as soon as possible.
         </p>
 
-        <form action="https://formspree.io/f/mrenypdg" method="POST">
-            <input type="hidden" name="_next" value="https://box-boys.com/thankyou.html">
+        <form id="pickup-form" action="https://formspree.io/f/mrenypdg" method="POST">
+
             <input
                 type="text"
                 name="name"
@@ -67,7 +67,44 @@
                 Request Pickup
             </button>
         
+            <p id="form-status"></p>
+        
         </form>
+
+        <script>
+            const form = document.getElementById("pickup-form");
+            const statusMessage = document.getElementById("form-status");
+        
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault();
+        
+                statusMessage.textContent = "Sending...";
+        
+                const formData = new FormData(form);
+        
+                try {
+                    const response = await fetch(form.action, {
+                        method: form.method,
+                        body: formData,
+                        headers: {
+                            Accept: "application/json"
+                        }
+                    });
+        
+                    if (response.ok) {
+                        statusMessage.textContent =
+                            "Thank you! Your pickup request was sent successfully.";
+                        form.reset();
+                    } else {
+                        statusMessage.textContent =
+                            "Something went wrong. Please try again.";
+                    }
+                } catch (error) {
+                    statusMessage.textContent =
+                        "Something went wrong. Please try again.";
+                }
+            });
+        </script>
 
     </div>
 
