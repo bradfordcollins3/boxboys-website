@@ -38,31 +38,35 @@
             get back to you as soon as possible.
         </p>
 
-        <form>
+        <form action="https://formspree.io/f/mrenypdg" method="POST">
 
             <input
                 type="text"
+                name="name"
                 placeholder="Full Name"
                 required>
-
+        
             <input
                 type="email"
+                name="email"
                 placeholder="Email Address"
                 required>
-
+        
             <input
                 type="tel"
+                name="phone"
                 placeholder="Phone Number">
-
+        
             <textarea
+                name="message"
                 rows="7"
                 placeholder="Tell us about your cardboard pickup..."
                 required></textarea>
-
-            <button class="button">
+        
+            <button class="button" type="submit">
                 Request Pickup
             </button>
-
+        
         </form>
 
     </div>
