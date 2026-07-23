@@ -51,7 +51,6 @@ nav a:hover{
     color:#2f6b45;
 }
 
-/* ===== HERO ===== */
 
 .hero{
     height:80vh;
@@ -64,6 +63,7 @@ nav a:hover{
     background-position:center;
     color:white;
 }
+
 
 .hero h2{
     font-size:4rem;
